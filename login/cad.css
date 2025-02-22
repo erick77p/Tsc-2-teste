@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+/* Reset e Configurações Gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
+}
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 80vh;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    flex-direction: column; /* Alterado para coluna em telas menores */
+}
+
+/* Imagem do Formulário */
+.form-image {
+    width: 100%;
+    height: 200px; /* Altura fixa para a imagem em telas menores */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fde3a7d7;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Formulário */
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+/* Cabeçalho do Formulário */
+.form-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-header h1 {
+    font-size: 1.8rem;
+    color: #1e90ff;
+    position: relative;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background-color: #1e90ff;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+}
+.login-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-button button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.login-button button:hover {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+/* Botões de Escolha (Pessoal e Empresarial) */
+.tipo-cadastro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tipo-cadastro button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.tipo-cadastro button.active {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.tipo-cadastro button:hover {
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+/* Grupos de Input */
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    width: 100%; /* Inputs ocupam 100% da largura em telas menores */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-box label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.input-box input {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.input-box input:hover {
+    border-color: #1e90ff;
+}
+
+.input-box input:focus {
+    outline: none;
+    border-color: #1e90ff;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
+.input-box input::placeholder {
+    color: #999;
+}
+
+/* Grupo de Gênero */
+.gender-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.gender-input input {
+    margin-right: 0.5rem;
+}
+
+.gender-input label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Botão de Continuar */
+.continue-button {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.continue-button button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-button button:hover {
+    background-color: #0077cc;
+}
+
+/* Responsividade */
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Volta ao layout horizontal em telas maiores */
+    }
+
+    .form-image {
+        width: 50%;
+        height: auto;
+    }
+
+    .form {
+        width: 50%;
+        padding: 3rem;
+    }
+
+    .input-box {
+        width: 48%; /* Inputs voltam a ocupar 48% da largura em telas maiores */
+    }
+
+    .gender-group {
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .form-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .tipo-cadastro {
+        flex-direction: column; /* Botões em coluna em telas muito pequenas */
+    }
+
+    .tipo-cadastro button {
+        width: 100%;
+    }
+
+    .input-box input {
+        padding: 0.6rem 1rem;
+    }
+
+    .continue-button button {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}

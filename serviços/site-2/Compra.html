@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adquira um site de portfólio pessoal bem estruturado e moderno. Confira as opções de pagamento e compre agora!">
+    <title>Site de Portfólio Pessoal - Technologic Solution Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/_midia/tsc.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Technologic Solution Company</h1>
+    </header>
+    
+    <!-- Conteúdo principal -->
+    <main class="product-container">
+        <!-- Galeria de imagens -->
+        <section class="product-gallery" aria-label="Galeria de imagens do produto">
+            <div class="thumbnail-images">
+                <img src="/serviços/midias.servi/Home.png" alt="Página inicial do portfólio" class="thumbnail" data-main="/serviços/midias.servi/Home.png">
+                <img src="/serviços/midias.servi/Contact.png" alt="Página de projetos do portfólio" class="thumbnail" data-main="/serviços/midias.servi/Contact.png">
+                <img src="/serviços/midias.servi/About.png" alt="Página sobre mim do portfólio" class="thumbnail" data-main="/serviços/midias.servi/About.png">
+                <img src="/serviços/midias.servi/4.png" alt="Página de contato do portfólio" class="thumbnail" data-main="/serviços/midias.servi/4.png">
+                <img src="/serviços/midias.servi/5.png" alt="Página de contato do portfólio" class="thumbnail" data-main="/serviços/midias.servi/5.png">
+            </div>
+            <div class="main-image">
+                <img src="/serviços/midias.servi/Home.png" alt="Imagem principal do portfólio" id="mainProductImage">
+            </div>
+        </section>
+        
+        <!-- Detalhes do produto -->
+        <section class="product-details" aria-label="Detalhes do produto">
+            <h2>Exemplo de site de portfólio pessoal</h2>
+            <p class="price">R$ 2.999,99</p>
+            <p class="description">
+                Você está procurando um site de portfólio pessoal bem estruturado, com design moderno e funcionalidades completas? Este é o momento perfeito para investir em um portal que já possui uma base sólida e oferece inúmeras possibilidades de crescimento.
+            </p>
+            
+            <!-- Formas de pagamento -->
+            <div class="payment-options">
+                <h3>Formas de pagamento</h3>
+                <ul>
+                    <li>Cartão de crédito em até 12x</li>
+                    <li>Boleto bancário</li>
+                    <li>Pix com 10% de desconto</li>
+                </ul>
+            </div>
+            
+            <!-- Botão de compra -->
+           <a href="/compra/index.html" target="_blank" rel="noopener noreferrer"> <button class="buy-button" aria-label="Comprar agora">Comprar Agora</button></a>
+        </section>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Technologic Solution Company - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para interatividade da galeria -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const thumbnails = document.querySelectorAll(".thumbnail");
+            const mainImage = document.getElementById("mainProductImage");
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener("click", () => {
+                    const newSrc = thumbnail.getAttribute("data-main");
+                    mainImage.setAttribute("src", newSrc);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

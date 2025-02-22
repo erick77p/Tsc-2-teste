@@ -1,0 +1,353 @@
+/* Reset básico e variáveis globais */
+:root {
+    --primary-color: #1e90ff;
+    --secondary-color: #00bfff;
+    --text-color: #333;
+    --background-color: #f4f4f9;
+    --white: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Cabeçalho */
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 15px 20px;
+    box-shadow: var(--shadow);
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+}
+
+li {
+    padding: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    
+    border-radius: 100px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+header img {
+    max-width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+}
+
+.header-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.header-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.header-menu a:hover {
+    color: #b3d7ff;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Faz os elementos ficarem empilhados */
+        text-align: center;
+    }
+
+    .header-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: transparent;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    .header-menu li {
+        width: 100%;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        padding: 10px;
+        border-radius: 20px;
+        margin-top: 5px;
+    }
+}
+
+/* Introdução */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.intro {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.intro h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* Serviços */
+.services {
+    padding: 40px 20px;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.service {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider */
+.team-slider {
+    padding: 40px 20px;
+    background-color: #eef4fc;
+    border-radius: 12px;
+    margin-top: 40px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.slide {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.slide img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Botões do slider */
+.slider-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    font-size: 1.5rem;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.prev-btn {
+    left: -50px;
+}
+
+.next-btn {
+    right: -50px;
+}
+
+.slider-btn:hover {
+    background-color: #084298;
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .slide img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .slider-btn {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .prev-btn {
+        left: -40px;
+    }
+
+    .next-btn {
+        right: -40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .service {
+        padding: 1.5rem;
+    }
+
+    .slide {
+        padding: 15px;
+    }
+
+    .slider-btn {
+        font-size: 1rem;
+        padding: 6px;
+    }
+
+    .prev-btn {
+        left: -30px;
+    }
+
+    .next-btn {
+        right: -30px;
+    }
+}
+/* Botões do slider */
+.slider-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    font-size: 1.5rem;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    opacity: 0.8;
+}
+
+.slider-btn:hover {
+    background-color: #084298;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.prev-btn {
+    left: 10px; /* Ajustado para ficar visível */
+}
+
+.next-btn {
+    right: 10px; /* Ajustado para ficar visível */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .slider-btn {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .prev-btn {
+        left: 5px;
+    }
+
+    .next-btn {
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-btn {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .prev-btn {
+        left: 5px;
+    }
+
+    .next-btn {
+        right: 5px;
+    }
+}

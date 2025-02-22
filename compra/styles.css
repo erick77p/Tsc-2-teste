@@ -1,0 +1,150 @@
+/* Reset e estilização geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f8fc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #004080, #0073e6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.bv {
+    background: linear-gradient(135deg, #004080, #0073e6);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.bv h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.bv p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.company-info {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center; /* Se precisar centralizar verticalmente */
+    text-align: center;
+    margin: 0 auto; /* Garante que a div fique no centro */
+    max-width: 600px; /* Mantém a largura controlada */
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h2 {
+    color: #004080;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.3);
+}
+
+button {
+    background: linear-gradient(135deg, #004080, #0073e6);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #003366, #005bb5);
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: auto;
+    font-size: 0.9rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer a {
+    color: #66c2ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+}

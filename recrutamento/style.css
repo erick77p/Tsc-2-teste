@@ -1,0 +1,219 @@
+/* Reset e estilização geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #eef5ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 20px;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-left: 15px;
+}
+
+.header-links {
+    display: flex;
+    gap: 15px;
+    margin-right: 15px;
+}
+
+.header-links a {
+    color: #d6eaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-links a:hover {
+    color: #ffdd57;
+}
+
+/* Container principal */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos */
+h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #003366;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* Formulários */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0073e6;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Botão */
+button {
+    background: linear-gradient(135deg, #003366, #0073e6);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #002244, #005bb5);
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Mensagem */
+#mensagem {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #003366;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 8px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+footer nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .header-links {
+        margin-top: 10px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}

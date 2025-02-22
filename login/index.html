@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Technologic Solution Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/_midia/tsc.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Efeito de onda animado -->
+        <div class="wave-container">
+            <div class="wave"></div>
+        </div>
+
+        <!-- Cabeçalho -->
+        <header class="header-main">
+            <img src="/_midia/tsc.png" alt="Logo da Technologic Solution Company" class="logo">
+            <h1>Technologic Solution Company</h1>
+        </header>
+
+        <!-- Caixa de Login -->
+        <div class="login-box" id="loginBox">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <!-- Campo de Usuário -->
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                </div>
+
+                <!-- Campo de Senha -->
+                <div class="input-group password-group">
+                    <label for="password">Senha</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                        <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                    </div>
+                </div>
+
+                <!-- Mensagem de Erro -->
+                <p class="error-message" id="errorMessage" style="display: none;">Usuário ou senha incorretos</p>
+
+                <!-- Botão de Entrar -->
+                <button type="submit">Entrar</button>
+            </form>
+
+            <!-- Link para Cadastro -->
+            <p>Não tem uma conta? <a href="cad.html">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <!-- Script JavaScript -->
+   <script src="script.js"></script>
+</body>
+</html>

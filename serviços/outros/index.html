@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Serviços de Marketing, Design, Manutenção de Hardware e Montagem de PCs na região de Recife.">
+    <title>Serviços - Tech Solutions Recife</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/_midia/tsc.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-main">
+            <img src="/_midia/tsc.png" alt="Logo Tech Solutions" class="logo">
+            <h1>Tech Solutions </h1>
+        </div>
+        <nav class="header-links">
+            <a href="/login.html">Login</a>
+            <a href="/contato.html">Fale Conosco</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h1>Seja bem-vindo à Tech Solutions Recife</h1>
+            <p>Oferecemos soluções completas em Marketing, Design, Manutenção de Hardware e Montagem de PCs.</p>
+        </section>
+        <div class="efect-digit">
+        <h2>Nossos Serviços</h2>
+    </div>
+        <section class="servicos">
+            
+            <div class="servico">
+                <h3>Marketing Digital</h3>
+                <img src="/_midia/undraw_design-feedback_kzg9.png" alt="">
+                <p>Criação de estratégias para alavancar sua marca com SEO, mídias sociais e campanhas pagas.</p>
+                <p class="price">Preço: R$ 1.500,00</p>
+            </div>
+            <div class="servico">
+                <h3>Design Gráfico</h3>
+                <img src="/_midia/undraw_uploading_nu4x.png" alt="">
+                <p>Identidade visual, criação de logos, banners, e materiais gráficos para sua empresa.</p>
+                <p class="price">Preço: R$ 800,00</p>
+            </div>
+            <div class="servico">
+                <h3>Manutenção de Hardware</h3>
+                <img src="/_midia/undraw_ship-it_vn4g.png" alt="">
+                <p>Reparos, upgrades e otimização de desempenho para computadores e notebooks.</p>
+                <p class="price">Preço: R$ 200,00 (por hora)</p>
+            </div>
+            <div class="servico">
+                <h3>Montagem de PCs</h3>
+                <img src="/_midia/pixel-art-13602.gif" alt="">
+                <p>Ajuda especializada na escolha e montagem do PC ideal para suas necessidades.</p>
+                <p class="price">Preço: R$ 300,00 (montagem básica)</p>
+            </div>
+        </section>
+
+        <section class="contato">
+            <h2>Entre em Contato</h2>
+            <p>Atendemos na região de Recife. Caso esteja em outra localidade, utilize nossa Caixa Postal para envio de equipamentos.</p>
+            <p><strong>Caixa Postal:</strong> 12345 - Recife, PE</p>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Seção de Pagamento -->
+        <section class="pagamento">
+            <h2>Formas de Pagamento</h2>
+            <form>
+                <label for="servico">Escolha o Serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="">Selecione</option>
+                    <option value="marketing">Marketing Digital - R$ 1.500,00</option>
+                    <option value="design">Design Gráfico - R$ 800,00</option>
+                    <option value="manutencao">Manutenção de Hardware - R$ 200,00/hora</option>
+                    <option value="montagem">Montagem de PCs - R$ 300,00</option>
+                </select>
+
+                <label for="pagamento">Escolha o Método de Pagamento:</label>
+                <select id="pagamento" name="pagamento" onchange="mostrarDetalhesPagamento()" required>
+                    <option value="">Selecione</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="boleto">Boleto Bancário</option>
+                    <option value="pix">PIX</option>
+                </select>
+
+                <!-- Detalhes do Cartão de Crédito -->
+                <div id="cartaoDetalhes" class="payment-details">
+                    <label for="numeroCartao">Número do Cartão:</label>
+                    <input type="text" id="numeroCartao" name="numeroCartao" placeholder="0000 0000 0000 0000">
+                    
+                    <label for="validadeCartao">Validade (MM/AA):</label>
+                    <input type="text" id="validadeCartao" name="validadeCartao" placeholder="MM/AA">
+                    
+                    <label for="cvvCartao">CVV:</label>
+                    <input type="text" id="cvvCartao" name="cvvCartao" placeholder="123">
+                    
+                    <label for="nomeTitular">Nome do Titular:</label>
+                    <input type="text" id="nomeTitular" name="nomeTitular" placeholder="Nome como no cartão">
+                    
+                    <label for="parcelas">Número de Parcelas:</label>
+                    <select id="parcelas" name="parcelas" onchange="calcularParcelas()">
+                        <option value="1">1x</option>
+                        <option value="3">3x</option>
+                        <option value="6">6x</option>
+                        <option value="9">9x</option>
+                        <option value="12">12x</option>
+                    </select>
+                    <p id="valorParcelas"></p>
+                </div>
+
+                <!-- Detalhes do Boleto Bancário -->
+                <div id="boletoDetalhes" class="payment-details">
+                    <p>Após finalizar a compra, um boleto bancário será enviado para o seu e-mail com vencimento em 2 dias úteis.</p>
+                </div>
+
+                <!-- Detalhes do PIX -->
+                <div id="pixDetalhes" class="payment-details">
+                    <p>Escaneie o QR Code abaixo ou utilize a chave PIX para pagamento:</p>
+                    <img src="qrcode-pix.png" alt="QR Code PIX" style="width: 150px; height: 150px;">
+                    <p><strong>Chave PIX (CNPJ):</strong> 12.345.678/0001-99</p>
+                </div>
+
+                <!-- Termos e Condições -->
+                <div class="terms">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Eu concordo com os <a href="/politicaas/usuario.html" target="_blank">Termos de Uso</a> e a <a href="/politicaas/priva.html" target="_blank">Política de Privacidade</a>.</label>
+                </div>
+                
+                <button type="submit">Finalizar Compra</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tech Solutions Recife - Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

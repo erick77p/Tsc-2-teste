@@ -1,0 +1,553 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef4fc;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #00bfff, #1e90ff);
+    color: #fff;
+    padding: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.header-links {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+}
+
+.header-links a {
+    color: #b3d7ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Seção de boas-vindas */
+.bv {
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bv h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.bv p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Seção de personalização */
+.perso {
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    max-width: 900px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.perso h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.perso h2 {
+    font-size: 1.5rem;
+    border-left: 5px solid white;
+    padding-left: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.perso p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.perso ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.perso ul li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid white;
+    text-align: left;
+}
+
+.perso ul li strong {
+    color: white;
+}
+
+/* Efeito de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Imagem do formulário */
+.form-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* Formulário */
+.form {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-header .title h1 {
+    font-size: 1.8rem;
+    color: #0056b3;
+    margin-bottom: 5px;
+}
+
+.form-header .title p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.login-button button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button button:hover {
+    background-color: #004494;
+}
+
+.login-button p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Campos de entrada */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.input-box textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.input-box p.hint {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Motivos de contato */
+.contact-reasons {
+    margin-bottom: 20px;
+}
+
+.contact-title h5 {
+    font-size: 1.2rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.contact-title p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-input {
+    display: flex;
+    align-items: center;
+}
+
+.contact-input label {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Botão de envio */
+.submit-button {
+    margin-top: 20px;
+}
+
+.submit-button button {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button button:hover {
+    background-color: #004494;
+}
+
+.form-footer {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-footer a {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: #004494;
+}
+
+/* Estilização do container principal */
+.site-gallery {
+    text-align: center;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.site-gallery h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Layout em grid */
+.site-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cartão de cada site */
+.site-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover */
+.site-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos dos sites */
+.site-card h2 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Imagens */
+.site-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito hover nas imagens */
+.site-card img:hover {
+    transform: scale(1.08);
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer img {
+    max-width: 100px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+.text {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.text > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    min-width: 180px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.brand {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .header-links {
+        margin-right: 0;
+        gap: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .form-image {
+        display: none; /* Oculta a imagem em telas menores */
+    }
+
+    .form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .login-button {
+        margin-top: 10px;
+    }
+
+    .input-box input,
+    .input-box textarea {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    .site-gallery {
+        grid-template-columns: 1fr; /* Uma única coluna em telas menores */
+    }
+
+    .site-card {
+        padding: 10px;
+    }
+
+    .text > div {
+        min-width: 100%; /* Ocupa 100% da largura em telas menores */
+        padding: 10px;
+    }
+
+    footer img {
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        gap: 15px;
+    }
+
+    .text > div {
+        min-width: 100%;
+    }
+
+    .input-box input,
+    .input-box textarea {
+        padding: 8px; /* Reduz o padding em telas muito pequenas */
+    }
+
+    .submit-button button {
+        padding: 10px 15px; /* Ajusta o padding do botão */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+    }
+}

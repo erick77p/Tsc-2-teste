@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cad.css">
+    <link rel="shortcut icon" href="/_midia/tsc.png" type="image/x-icon">
+    <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="/_midia/pixel-art-12601.gif" alt="Imagem de Cadastro">
+        </div>
+        <div class="form">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Cadastre-se</h1>
+                </div>
+                <div class="login-button">
+                    <button><a href="#">Entrar</a></button>
+                </div>
+            </div>
+
+            <div class="tipo-cadastro">
+                <button id="btnPessoal" class="active">Cadastro Pessoal</button>
+                <button id="btnEmpresarial">Cadastro Empresarial</button>
+            </div>
+
+            <!-- Cadastro Pessoal -->
+            <form id="cadastroPessoalForm" action="#">
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="login">Nome de Login</label>
+                        <input id="login" type="text" name="login" placeholder="Escolha um nome de login" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="firstname">Primeiro Nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua Senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+                    </div>
+                </div>
+                <div class="gender-inputs">
+                    <h6>Gênero</h6>
+                    <div class="gender-group">
+                        <label><input type="radio" name="gender" value="Feminino"> Feminino</label>
+                        <label><input type="radio" name="gender" value="Masculino"> Masculino</label>
+                        <label><input type="radio" name="gender" value="Outros"> Outros</label>
+                        <label><input type="radio" name="gender" value="NaoDizer"> Prefiro não dizer</label>
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <button type="submit">Continuar</button>
+                </div>
+            </form>
+
+            <!-- Cadastro Empresarial -->
+            <form id="cadastroEmpresarialForm" action="#" style="display: none;">
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="loginEmpresarial">Nome de Login</label>
+                        <input id="loginEmpresarial" type="text" name="loginEmpresarial" placeholder="Escolha um nome de login" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="razaoSocial">Razão Social</label>
+                        <input id="razaoSocial" type="text" name="razaoSocial" placeholder="Razão Social" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="cnpj">CNPJ</label>
+                        <input id="cnpj" type="text" name="cnpj" placeholder="Digite o CNPJ" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="emailEmpresarial">E-mail Corporativo</label>
+                        <input id="emailEmpresarial" type="email" name="emailEmpresarial" placeholder="Digite o e-mail corporativo" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="telefoneEmpresarial">Telefone</label>
+                        <input id="telefoneEmpresarial" type="tel" name="telefoneEmpresarial" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="passwordEmpresarial">Senha</label>
+                        <input id="passwordEmpresarial" type="password" name="passwordEmpresarial" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="confirmPasswordEmpresarial">Confirme sua Senha</label>
+                        <input id="confirmPasswordEmpresarial" type="password" name="confirmPasswordEmpresarial" placeholder="Digite sua senha novamente" required>
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <button type="submit">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="cad.js"></script>
+</body>
+
+</html>

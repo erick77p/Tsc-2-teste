@@ -1,0 +1,311 @@
+/* Reset e variáveis globais */
+:root {
+    --primary-color: #1e90ff; /* Azul principal */
+    --secondary-color: #00bfff; /* Azul secundário */
+    --text-color: #333; /* Cor do texto */
+    --background-color: #f4f4f9; /* Cor de fundo */
+    --white: #fff; /* Branco */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra padrão */
+    --transition: all 0.3s ease-in-out; /* Transição suave */
+    --border-radius: 12px; /* Bordas arredondadas */
+    --max-width: 1200px; /* Largura máxima do conteúdo */
+    --font-family: 'Poppins', sans-serif; /* Fonte principal */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef4fc;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: var(--white);
+    padding: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-left: 10px;
+}
+
+.header-links {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+}
+
+.header-links a {
+    color: #b3d7ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition);
+}
+
+.header-links a:hover {
+    color: var(--white);
+}
+
+/* Container principal */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Seções */
+.services {
+    background: var(--white);
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.services:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+li::before {
+    content: "✔";
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    li {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    color: white !important;
+    padding: 20px 10px; /* Reduzindo o padding para diminuir o tamanho do footer */
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px; /* Reduzindo a largura máxima */
+    flex-wrap: wrap;
+    gap: 20px; /* Reduzindo o espaçamento entre os elementos */
+    padding: 0 10px;
+}
+
+footer img {
+    max-width: 120px; /* Diminuindo o tamanho do logo */
+    align-self: center;
+    margin-bottom: 15px;
+    align-items: center;
+    
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    color: white !important;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #333;
+    padding: 20px; /* Reduzindo o padding */
+    border-radius: 8px; /* Diminuindo os cantos arredondados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    min-width: 270px; /* Aumentando a largura mínima em 50% */
+    max-width: 375px; /* Aumentando a largura máxima em 50% */
+    text-align: left;
+    flex: 1;
+    color: white !important;
+}
+
+.footer-box h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #00bfff;
+    border-bottom: 2px solid white;
+    padding-bottom: 8px;
+}
+
+.footer-box p {
+    font-size: 0.9rem;
+    color: white !important;
+    margin-bottom: 8px;
+}
+
+.footer-box a {
+    color: #00bfff;
+
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footer-box a:hover {
+    color: #00bfff;
+}
+
+.brand {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid white;
+    font-size: 0.9rem;
+    color: #00bfff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .text {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-box {
+        width: 100%;
+        max-width: none;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-box h2 {
+        text-align: center;
+    }
+}

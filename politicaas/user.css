@@ -1,0 +1,84 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+   background: linear-gradient(135deg, #1e90ff, #00bfff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    max-width: 150px;
+    margin-top: 10px;
+}
+
+h1, h2, h3 {
+    color: #002040;
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #004080;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.8;
+    color: #555;
+}
+
+ul {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #555;
+}
+
+/* Estrutura do conteúdo */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #004494;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Títulos e subtítulos */
+h2 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #0056b3;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Parágrafos e texto */
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Links */
+a {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004494;
+    text-decoration: underline;
+}
+
+/* Listas */
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Destaques */
+strong {
+    color: #0056b3;
+}
+
+/* Contato */
+.contact-info {
+    background-color: #e9f2ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Rodapé implícito */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border-top: 5px solid #004494;
+}
+
+footer p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .contact-info {
+        padding: 10px;
+    }
+}
