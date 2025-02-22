@@ -407,6 +407,7 @@ header {
 }
 
 /* Footer */
+
 footer {
     display: flex;
     flex-direction: column;
@@ -455,6 +456,18 @@ footer img:hover {
 .text > div:hover {
     transform: translateY(-5px);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Links do rodapé */
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffdd57;
 }
 
 .brand {
